@@ -1,0 +1,3 @@
+This is a small English corpus used for demonstration.
+It contains a few sentences about data structures and algorithms.
+The quick brown fox jumps over the lazy dog.

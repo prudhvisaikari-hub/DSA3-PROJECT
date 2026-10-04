@@ -1,0 +1,7 @@
+5
+stringone
+stringtwo
+5
+apple
+pineapple
+9

@@ -1,0 +1,4 @@
+Data structures such as tries, hash maps, and suffix arrays are fundamental to
+building efficient text processing systems. Pattern matching using KMP is fast
+and reliable for exact substring search. NP-hard scheduling problems appear in
+resource allocation and task scheduling for large scale distributed systems.

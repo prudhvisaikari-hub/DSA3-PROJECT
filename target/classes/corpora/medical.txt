@@ -1,0 +1,3 @@
+The patient presented with fever and cough.
+A diagnosis of pneumonia was made after chest X-ray.
+Treatment includes antibiotics and supportive care.
