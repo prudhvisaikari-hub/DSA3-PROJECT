@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextHack+ | Algorithmic Engine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-anim"></div>
+    <main class="container glass-panel">
+        <header>
+            <h1 class="gradient-text">TextHack+</h1>
+            <p class="subtitle">High-Performance Algorithmic Engine</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="exact">Exact Match</button>
+            <button class="tab-btn" data-tab="fuzzy">Fuzzy Search</button>
+            <button class="tab-btn" data-tab="similarity">Similarity</button>
+            <button class="tab-btn" data-tab="primality">Primality Test</button>
+        </div>
+
+        <div class="tab-content active" id="exact">
+            <div class="input-group">
+                <label>Text</label>
+                <textarea id="exact-text" placeholder="Enter source text here..."></textarea>
+            </div>
+            <div class="input-group">
+                <label>Pattern</label>
+                <input type="text" id="exact-pattern" placeholder="Pattern to find...">
+            </div>
+            <button class="action-btn" onclick="runQuery('exact')">Execute KMP Match</button>
+        </div>
+
+        <div class="tab-content" id="fuzzy">
+            <div class="input-group">
+                <label>Source String</label>
+                <input type="text" id="fuzzy-text1" placeholder="First string...">
+            </div>
+            <div class="input-group">
+                <label>Target String</label>
+                <input type="text" id="fuzzy-text2" placeholder="Second string...">
+            </div>
+            <button class="action-btn" onclick="runQuery('fuzzy')">Calculate Distance</button>
+        </div>
+
+        <div class="tab-content" id="similarity">
+            <div class="input-group">
+                <label>Text 1</label>
+                <textarea id="sim-text1" placeholder="Enter first text..."></textarea>
+            </div>
+            <div class="input-group">
+                <label>Text 2</label>
+                <textarea id="sim-text2" placeholder="Enter second text..."></textarea>
+            </div>
+            <button class="action-btn" onclick="runQuery('similarity')">Find LCS</button>
+        </div>
+
+        <div class="tab-content" id="primality">
+            <div class="input-group">
+                <label>Number to Test</label>
+                <input type="number" id="prim-number" placeholder="Enter an integer...">
+            </div>
+            <button class="action-btn" onclick="runQuery('primality')">Test Primality</button>
+        </div>
+
+        <div id="result-box" class="result-box hidden">
+            <h3>Execution Results</h3>
+            <div class="result-grid">
+                <div class="metric">
+                    <span class="label">Algorithm</span>
+                    <span class="value" id="res-algo">-</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Time (ns)</span>
+                    <span class="value highlight" id="res-time">-</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Operations</span>
+                    <span class="value" id="res-ops">-</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Complexity</span>
+                    <span class="value" id="res-complex">-</span>
+                </div>
+            </div>
+            <div class="output">
+                <span class="label">Output:</span>
+                <div class="output-content" id="res-output">-</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
