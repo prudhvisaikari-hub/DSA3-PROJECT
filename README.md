@@ -6,7 +6,7 @@ TextHack+ is an intelligent language query system built for a Data Structures & 
 
 The system is organized into four distinct modules/layers:
 
-### 1. Data Structures Layer (`com.team7.texthackplus.structures`)
+### 1. Data Structures Layer (`com.texthackplus.structures`)
 Custom-built, dependency-free foundational collections, including:
 - **DynamicArray**: A resizable array (similar to `ArrayList`).
 - **SinglyLinkedList**: Used for graph adjacency lists.
@@ -16,14 +16,14 @@ Custom-built, dependency-free foundational collections, including:
 - **AdjListGraph**: Directed graph representation for flow networks.
 - **Trie**: Prefix tree used in the ingestion layer.
 
-### 2. Ingestion Layer (`com.team7.texthackplus.ingestion`)
+### 2. Ingestion Layer (`com.texthackplus.ingestion`)
 Handles the loading and indexing of text corpora. Features include:
 - Support for multiple languages (English, Hindi, and Medical datasets).
 - **DocumentStore**: Organizes loaded documents.
 - **Tokenizer**: Processes raw strings into searchable words.
 - **CorpusLoader**: Manages file I/O using basic `java.io`.
 
-### 3. Algorithm Engine Layer (`com.team7.texthackplus.algorithms` and `.service`)
+### 3. Algorithm Engine Layer (`com.texthackplus.algorithms` and `.service`)
 Implements core algorithms mapped to specific project requirements:
 - **Exact Match (KMPMatcher)**: O(n + m) exact string matching using Knuth-Morris-Pratt.
 - **Fuzzy Search (Levenshtein)**: Dynamic programming edit distance algorithm.
@@ -34,7 +34,7 @@ Implements core algorithms mapped to specific project requirements:
 
 The **QueryService** class sits on top of this layer, acting as a unified query dispatcher that routes commands to the appropriate algorithm and uniformly tracks execution time and operation counts.
 
-### 4. User Interface Layer (`com.team7.texthackplus.cli`)
+### 4. User Interface Layer (`com.texthackplus.cli`)
 A menu-driven Command Line Interface (`CLI.java`) that allows the user to:
 - Select and load active corpora.
 - Toggle "Domain Mode" (Medical corpus vs General corpora).
@@ -54,11 +54,11 @@ To compile the project strictly without external dependencies (no Maven/JUnit re
 
 2. **Run the CLI**:
    ```cmd
-   java -cp bin com.team7.texthackplus.cli.CLI
+   java -cp bin com.texthackplus.cli.CLI
    ```
 
 3. **Run the Test Harnesses** (requires the `-ea` flag to enable Java assertions):
    ```cmd
-   java -ea -cp bin com.team7.texthackplus.service.QueryServiceTest
+   java -ea -cp bin com.texthackplus.service.QueryServiceTest
    ```
    *(You can replace `QueryServiceTest` with any of the specific test classes in `src/test/java/...` to verify individual components).*
